@@ -1,2 +1,2 @@
-# styled-string
-Simplify attributed strings construction in Swift
+# 🦄 StyledString
+Simplify attributed strings construction in Swift.
