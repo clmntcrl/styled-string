@@ -39,7 +39,7 @@ else { fatalError("Cannot get image") }
 
 // Init the text view that will render the attributed string
 
-let textView = UITextView(frame: CGRect(x: 0, y: 0, width: 400, height: 300))
+let textView = UITextView(frame: CGRect(x: 0, y: 0, width: 400, height: 380))
 let linkDelegate = LinkDelegate(onInteractWithLink: { print($0) })
 textView.delegate = linkDelegate
 textView.backgroundColor = .capeHoney
@@ -51,9 +51,9 @@ textView.linkTextAttributes = [
 // Build styled string and render it
 
 textView.attributedText = StyledString([
-    .text("StyledString", style: styles.title),
-    .image(image),
-    .text("\n\nSimplify attributed string construction in Swift.\n", style: styles.body),
+    .text("StyledString ", style: styles.title),
+    .image(image, baselineOffset: -24),
+    .text("\nSimplify attributed string construction in Swift.\n", style: styles.body),
     .list(
         [
             .text("Declarative", style: styles.body),
